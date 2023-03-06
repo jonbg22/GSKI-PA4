@@ -153,6 +153,20 @@ class BSTMap:
             root = root.left
         
         return root
+    
+class MyComparableKey:
+    
+    def __init__(self, int_val, str_val):
+        self.int_val = int_val
+        self.str_val = str_val
+    
+    def __lt__(self, other):
+        if isinstance(other, MyComparableKey):
+            if self.int_val < other.int_val:
+                return True
+            elif self.int_val == other.int_val:
+                return self.str_val < other.str_val
+        return NotImplemented
         
 
 if __name__ == "__main__":
