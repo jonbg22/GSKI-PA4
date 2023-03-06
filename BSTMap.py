@@ -156,16 +156,16 @@ class BSTMap:
     
 class MyComparableKey:
     
-    def __init__(self, int_val, str_val):
-        self.int_val = int_val
-        self.str_val = str_val
+    def __init__(self, int_value, str_value):
+        self.int_value = int_value
+        self.str_value = str_value
     
     def __lt__(self, other):
         if isinstance(other, MyComparableKey):
-            if self.int_val < other.int_val:
+            if self.int_value < other.int_value:
                 return True
-            elif self.int_val == other.int_val:
-                return self.str_val < other.str_val
+            elif self.int_value == other.int_value:
+                return self.str_value < other.str_value
         return NotImplemented
         
 
